@@ -11,6 +11,8 @@ public class Lutemon {
     protected int maxHealth;
     protected int id;
 
+    protected int experience;
+
     public String getName() {
         return name;
     }
@@ -25,6 +27,30 @@ public class Lutemon {
 
     public String getGameNumber() {
         return gameNumber;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getExperience() {
+        return experience;
     }
 
     public Lutemon(String name, String color, String age, String gameNumber) {

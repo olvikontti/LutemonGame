@@ -53,5 +53,9 @@ public class AddLutemonActivity extends AppCompatActivity {
                 color = "Musta";
                 break;
         }
+
+
+        Lutemon lutemon = new Lutemon(name, color, age, gameNumber);
+        LutemonStorage.getInstance().addLutemon(lutemon);
     }
 }

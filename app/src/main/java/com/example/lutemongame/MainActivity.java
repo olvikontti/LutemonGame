@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void switchToAddLutemon(View view) {
         Intent intent = new Intent(this, AddLutemonActivity.class);
         startActivity(intent);

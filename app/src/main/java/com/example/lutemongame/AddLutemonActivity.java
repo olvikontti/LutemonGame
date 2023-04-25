@@ -28,7 +28,7 @@ public class AddLutemonActivity extends AppCompatActivity {
 
     }
 
-    public void addUser(View view) {
+    public void addLutemon(View view) {
 
         String name = nameTxt.getText().toString();
         String age = ageTxt.getText().toString();

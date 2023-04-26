@@ -3,7 +3,9 @@ package com.example.lutemongame;
 import java.io.Serializable;
 
 public class Lutemon implements Serializable {
+
     private static final long SerialVersion1 = 123;
+
     protected String name;
     protected String color;
     protected String age;

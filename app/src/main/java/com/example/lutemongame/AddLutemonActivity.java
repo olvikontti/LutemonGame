@@ -2,6 +2,7 @@ package com.example.lutemongame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,6 +14,10 @@ public class AddLutemonActivity extends AppCompatActivity {
     private EditText ageTxt;
     private EditText gameNumberTxt;
     private RadioGroup colorRg;
+    private String color;
+
+    //private Context context;
+
 
 
     @Override
@@ -27,13 +32,12 @@ public class AddLutemonActivity extends AppCompatActivity {
 
 
     }
-
     public void addLutemon(View view) {
 
         String name = nameTxt.getText().toString();
         String age = ageTxt.getText().toString();
         String gameNumber = gameNumberTxt.getText().toString();
-        String color = colorRg.toString();
+        //String color = colorRg.toString();
 
         switch (colorRg.getCheckedRadioButtonId()) {
             case R.id.rbWhite:
@@ -55,5 +59,6 @@ public class AddLutemonActivity extends AppCompatActivity {
 
         Lutemon lutemon = new Lutemon(name, color, age, gameNumber);
         LutemonStorage.getInstance().addLutemon(lutemon);
+        //LutemonStorage.getInstance().saveLutemons(context);
     }
 }

@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> {
 
     private Context context;
-
     private ArrayList<Lutemon> lutemons = new ArrayList<>();
 
     public LutemonListAdapter(Context context, ArrayList<Lutemon> lutemons) {

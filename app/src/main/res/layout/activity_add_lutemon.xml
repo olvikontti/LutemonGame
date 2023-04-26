@@ -88,6 +88,7 @@
         android:layout_width="245dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
+        android:onClick="addLutemon"
         android:text="Lisää uusi Lutemon"
         app:layout_constraintEnd_toEndOf="@+id/rgColors"
         app:layout_constraintStart_toStartOf="@+id/rgColors"

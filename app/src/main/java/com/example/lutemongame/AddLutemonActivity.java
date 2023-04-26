@@ -35,9 +35,6 @@ public class AddLutemonActivity extends AppCompatActivity {
         String gameNumber = gameNumberTxt.getText().toString();
         String color = colorRg.toString();
 
-        int image = 0;
-
-
         switch (colorRg.getCheckedRadioButtonId()) {
             case R.id.rbWhite:
                 color = "Valkoinen";

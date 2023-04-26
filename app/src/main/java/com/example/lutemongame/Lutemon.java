@@ -14,10 +14,13 @@ public class Lutemon implements Serializable {
     protected int maxHealth;
     protected int id;
     protected int experience;
+    protected int image;
 
     public String getName() {
         return name;
     }
+
+    public int getImage() { return image; }
 
     public String getColor() {
         return color;
@@ -61,6 +64,9 @@ public class Lutemon implements Serializable {
         this.age = age;
         this.gameNumber = gameNumber;
         this.experience = 0;
+
+        // testikuva
+        this.image = R.drawable.testface;
 
         switch (color) {
             case "Valkoinen":

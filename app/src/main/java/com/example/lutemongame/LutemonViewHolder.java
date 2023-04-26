@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class LutemonViewHolder extends RecyclerView.ViewHolder {
 
-    ImageView imageView;
+    ImageView lutemonImage;
 
     TextView lutemonName, lutemonAttack, lutemonDefense, lutemonHealth, lutemonExperience;
     public LutemonViewHolder(@NonNull View itemView) {
         super(itemView);
-        imageView = itemView.findViewById(R.id.imageView);
+        lutemonImage = itemView.findViewById(R.id.ivLutemonImage);
         lutemonName = itemView.findViewById(R.id.tvLutemonName);
         lutemonAttack = itemView.findViewById(R.id.tvAttack);
         lutemonDefense = itemView.findViewById(R.id.tvDefense);

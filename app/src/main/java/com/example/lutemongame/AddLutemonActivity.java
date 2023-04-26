@@ -33,8 +33,10 @@ public class AddLutemonActivity extends AppCompatActivity {
         String name = nameTxt.getText().toString();
         String age = ageTxt.getText().toString();
         String gameNumber = gameNumberTxt.getText().toString();
-
         String color = colorRg.toString();
+
+        int image = 0;
+
 
         switch (colorRg.getCheckedRadioButtonId()) {
             case R.id.rbWhite:

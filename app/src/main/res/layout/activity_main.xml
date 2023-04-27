@@ -8,48 +8,13 @@
 
 
     <Button
-        android:id="@+id/btnAddNewLutemon"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="100dp"
-        android:onClick="switchToAddLutemon"
-        android:text="Lisää uusi Lutemon"
+        android:id="@+id/btnLogin"
+        android:layout_width="335dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="504dp"
+        android:onClick="switchToMenu"
+        android:text="Sisään"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnMoveLutemons"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:onClick="switchToMoveLutemons"
-        android:text="Siirrä Lutemoneja"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnListLutemons" />
-
-    <Button
-        android:id="@+id/btnBattleArena"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:onClick="switchToBattle"
-        android:text="Taisteluareenalle!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMoveLutemons" />
-
-    <Button
-        android:id="@+id/btnListLutemons"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:onClick="switchToLutemonList"
-        android:text="Listaa Lutemonit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddNewLutemon" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

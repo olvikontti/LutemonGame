@@ -3,12 +3,8 @@ package com.example.lutemongame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
-
-import java.util.ArrayList;
 
 public class BattleActivity extends AppCompatActivity {
 
@@ -17,7 +13,7 @@ public class BattleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_battle);
 
-        LinearLayout listLayout = findViewById(R.id.listLayout);
+        LinearLayout listLayout = findViewById(R.id.trainingListLayout);
         // LinearLayout battleLayout = findViewById(R.id.battleLayout);
 
         // Creates the checkbox list of available lutemons

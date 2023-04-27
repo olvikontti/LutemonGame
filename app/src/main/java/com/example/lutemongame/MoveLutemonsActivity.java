@@ -20,5 +20,8 @@ public class MoveLutemonsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    public void switchToTraining(View view) {
+        Intent intent = new Intent(this, TrainingActivity.class);
+        startActivity(intent);
+    }
 }

@@ -20,9 +20,5 @@ public class MoveLutemonsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void switchToBattleView(View view) {
-        Intent intent = new Intent(this, BattleActivity.class);
-        startActivity(intent);
-    }
 
 }

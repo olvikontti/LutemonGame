@@ -13,6 +13,7 @@ public class AddLutemonActivity extends AppCompatActivity {
     private EditText nameTxt;
     private RadioGroup colorRg;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,19 +31,19 @@ public class AddLutemonActivity extends AppCompatActivity {
 
         switch (colorRg.getCheckedRadioButtonId()) {
             case R.id.rbWhite:
-                LutemonStorage.getInstance().addLutemon(new White);
+                LutemonStorage.getInstance().addLutemon(new White());
                 break;
             case R.id.rbGreen:
-                color = "Vihreä";
+                LutemonStorage.getInstance().addLutemon(new Green());
                 break;
             case R.id.rbPink:
-                color = "Pinkki";
+                LutemonStorage.getInstance().addLutemon(new Pink());
                 break;
             case R.id.rbOrange:
-                color = "Oranssi";
+                LutemonStorage.getInstance().addLutemon(new Orange());
                 break;
             case R.id.rbBlack:
-                color = "Musta";
+                LutemonStorage.getInstance().addLutemon(new Black());
                 break;
         }
 

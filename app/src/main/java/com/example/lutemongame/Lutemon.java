@@ -67,9 +67,6 @@ public class Lutemon implements Serializable {
         this.gameNumber = gameNumber;
         this.experience = 0;
 
-        // testikuva
-        this.image = R.drawable.testface;
-
         switch (color) {
             case "Valkoinen":
                 this.attack = 5;
@@ -104,6 +101,7 @@ public class Lutemon implements Serializable {
                 this.defense = 0;
                 this.maxHealth = 16;
                 this.health = 16;
+                image = R.drawable.black;
                 break;
         }
     }

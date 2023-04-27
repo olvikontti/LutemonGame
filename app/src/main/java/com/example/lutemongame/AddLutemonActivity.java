@@ -27,28 +27,27 @@ public class AddLutemonActivity extends AppCompatActivity {
     public void addLutemon(View view) {
 
         String name = nameTxt.getText().toString();
+        int id = LutemonStorage.getInstance().getLutemons().size() + 1;
         //String color = colorRg.toString();
 
         switch (colorRg.getCheckedRadioButtonId()) {
             case R.id.rbWhite:
-                LutemonStorage.getInstance().addLutemon(new White());
+                LutemonStorage.getInstance().addLutemon(new White(name, id));
                 break;
             case R.id.rbGreen:
-                LutemonStorage.getInstance().addLutemon(new Green());
+                LutemonStorage.getInstance().addLutemon(new Green(name, id));
                 break;
             case R.id.rbPink:
-                LutemonStorage.getInstance().addLutemon(new Pink());
+                LutemonStorage.getInstance().addLutemon(new Pink(name, id));
                 break;
             case R.id.rbOrange:
-                LutemonStorage.getInstance().addLutemon(new Orange());
+                LutemonStorage.getInstance().addLutemon(new Orange(name, id));
                 break;
             case R.id.rbBlack:
-                LutemonStorage.getInstance().addLutemon(new Black());
+                LutemonStorage.getInstance().addLutemon(new Black(name, id));
                 break;
         }
 
-        //Lutemon lutemon = new Lutemon(name, color);
-        //LutemonStorage.getInstance().addLutemon(lutemon);
         LutemonStorage.getInstance().saveLutemons(this);
     }
 }

@@ -26,7 +26,7 @@ public class Lutemon implements Serializable {
         this.health = health;
         this.maxHealth = maxHealth;
         this.id = id;
-        this.experience = 0;
+        this.experience = experience;
         this.image = image;
     }
 

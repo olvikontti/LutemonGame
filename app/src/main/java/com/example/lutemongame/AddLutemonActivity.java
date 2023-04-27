@@ -11,8 +11,6 @@ import android.widget.RadioGroup;
 public class AddLutemonActivity extends AppCompatActivity {
 
     private EditText nameTxt;
-    private EditText ageTxt;
-    private EditText gameNumberTxt;
     private RadioGroup colorRg;
     private String color;
 
@@ -25,8 +23,6 @@ public class AddLutemonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_lutemon);
 
         nameTxt = findViewById(R.id.txtLutemonName);
-        ageTxt = findViewById(R.id.txtAge);
-        gameNumberTxt = findViewById(R.id.txtGameNumber);
         colorRg = findViewById(R.id.rgColors);
 
 
@@ -34,8 +30,6 @@ public class AddLutemonActivity extends AppCompatActivity {
     public void addLutemon(View view) {
 
         String name = nameTxt.getText().toString();
-        String age = ageTxt.getText().toString();
-        String gameNumber = gameNumberTxt.getText().toString();
         //String color = colorRg.toString();
 
         switch (colorRg.getCheckedRadioButtonId()) {
@@ -56,7 +50,7 @@ public class AddLutemonActivity extends AppCompatActivity {
                 break;
         }
 
-        Lutemon lutemon = new Lutemon(name, color, age, gameNumber);
+        Lutemon lutemon = new Lutemon(name, color);
         LutemonStorage.getInstance().addLutemon(lutemon);
         LutemonStorage.getInstance().saveLutemons(this);
     }

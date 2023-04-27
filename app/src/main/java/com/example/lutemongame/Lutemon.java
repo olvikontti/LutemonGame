@@ -8,8 +8,6 @@ public class Lutemon implements Serializable {
 
     protected String name;
     protected String color;
-    protected String age;
-    protected String gameNumber;
     protected int attack;
     protected int defense;
     protected int health;
@@ -26,14 +24,6 @@ public class Lutemon implements Serializable {
 
     public String getColor() {
         return color;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public String getGameNumber() {
-        return gameNumber;
     }
 
     public int getAttack() {
@@ -60,11 +50,10 @@ public class Lutemon implements Serializable {
         return experience;
     }
 
-    public Lutemon(String name, String color, String age, String gameNumber) {
+    public Lutemon(String name, String color) {
         this.name = name;
         this.color = color;
-        this.age = age;
-        this.gameNumber = gameNumber;
+
         this.experience = 0;
 
         switch (color) {

@@ -47,31 +47,6 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/txtGameNumber"
-        android:layout_width="245dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Pelinumero"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/rgColors"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="@+id/rgColors"
-        app:layout_constraintTop_toBottomOf="@+id/txtAge" />
-
-    <EditText
-        android:id="@+id/txtAge"
-        android:layout_width="245dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Ikä"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/rgColors"
-        app:layout_constraintStart_toStartOf="@+id/rgColors"
-        app:layout_constraintTop_toBottomOf="@+id/txtLutemonName" />
-
-    <EditText
         android:id="@+id/txtLutemonName"
         android:layout_width="245dp"
         android:layout_height="60dp"
@@ -92,5 +67,5 @@
         android:text="Lisää uusi Lutemon"
         app:layout_constraintEnd_toEndOf="@+id/rgColors"
         app:layout_constraintStart_toStartOf="@+id/rgColors"
-        app:layout_constraintTop_toBottomOf="@+id/txtGameNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLutemonName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

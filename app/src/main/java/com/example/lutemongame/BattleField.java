@@ -6,4 +6,10 @@ public class BattleField extends LutemonStorage{
     public BattleField(ArrayList<Lutemon> lutemons, String name) {
         super(lutemons, name);
     }
+
+    public void fight() {
+
+    }
+
+
 }

@@ -76,12 +76,14 @@ public class Lutemon implements Serializable {
                 this.defense = 4;
                 this.maxHealth = 20;
                 this.health = 20;
+
                 break;
             case "Vihreä":
                 this.attack = 6;
                 this.defense = 3;
                 this.maxHealth = 19;
                 this.health = 19;
+                image = R.drawable.green;
                 break;
             case "Pinkki":
                 this.attack = 7;
@@ -94,6 +96,7 @@ public class Lutemon implements Serializable {
                 this.defense = 1;
                 this.maxHealth = 17;
                 this.health = 17;
+                image = R.drawable.orange;
                 break;
             case "Musta":
                 this.attack = 9;

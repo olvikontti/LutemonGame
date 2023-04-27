@@ -9,11 +9,12 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class LutemonStorage {
-    private ArrayList<Lutemon> lutemons = new ArrayList<>();
+    protected ArrayList<Lutemon> lutemons = new ArrayList<>();
     private static LutemonStorage storage = null;
 
+    protected String name = "lutemonlist";
 
-    private LutemonStorage() {
+    private LutemonStorage(){
     }
 
     public void addLutemon(Lutemon lutemon) {
@@ -44,6 +45,11 @@ public class LutemonStorage {
         } catch (IOException e) {
             System.out.println("Lutemonien tallentaminen ei onnistunut");
         }
+    }
+
+    public LutemonStorage(ArrayList<Lutemon> lutemons, String name) {
+        this.lutemons = lutemons;
+        this.name = name;
     }
 
     public void loadLutemons(Context context){

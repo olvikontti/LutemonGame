@@ -9,7 +9,6 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class LutemonStorage {
-    private String name;
     private ArrayList<Lutemon> lutemons = new ArrayList<>();
     private static LutemonStorage storage = null;
 

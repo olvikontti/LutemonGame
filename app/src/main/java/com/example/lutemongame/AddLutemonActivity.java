@@ -16,7 +16,6 @@ public class AddLutemonActivity extends AppCompatActivity {
     private RadioGroup colorRg;
     private String color;
 
-    //private Context context;
 
 
 
@@ -59,6 +58,6 @@ public class AddLutemonActivity extends AppCompatActivity {
 
         Lutemon lutemon = new Lutemon(name, color, age, gameNumber);
         LutemonStorage.getInstance().addLutemon(lutemon);
-        //LutemonStorage.getInstance().saveLutemons(context);
+        LutemonStorage.getInstance().saveLutemons(this);
     }
 }

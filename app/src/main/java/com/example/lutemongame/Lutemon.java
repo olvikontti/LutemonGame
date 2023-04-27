@@ -50,49 +50,19 @@ public class Lutemon implements Serializable {
         return experience;
     }
 
-    public Lutemon(String name, String color) {
+
+    public Lutemon(String name, String color, int attack, int defense, int health, int maxHealth, int id, int experience, int image) {
         this.name = name;
         this.color = color;
-
+        this.attack = attack;
+        this.defense = defense;
+        this.health = health;
+        this.maxHealth = maxHealth;
+        this.id = id;
         this.experience = 0;
-
-        switch (color) {
-            case "Valkoinen":
-                this.attack = 5;
-                this.defense = 4;
-                this.maxHealth = 20;
-                this.health = 20;
-                image = R.drawable.white;
-                break;
-            case "Vihreä":
-                this.attack = 6;
-                this.defense = 3;
-                this.maxHealth = 19;
-                this.health = 19;
-                image = R.drawable.green;
-                break;
-            case "Pinkki":
-                this.attack = 7;
-                this.defense = 2;
-                this.maxHealth = 18;
-                this.health = 18;
-                image = R.drawable.pink;
-                break;
-            case "Oranssi":
-                this.attack = 8;
-                this.defense = 1;
-                this.maxHealth = 17;
-                this.health = 17;
-                image = R.drawable.orange;
-                break;
-            case "Musta":
-                this.attack = 9;
-                this.defense = 0;
-                this.maxHealth = 16;
-                this.health = 16;
-                image = R.drawable.black;
-                break;
-        }
+        this.image = image;
     }
+
+
 
 }

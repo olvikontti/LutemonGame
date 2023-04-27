@@ -29,6 +29,8 @@ public class LutemonStorage {
         return lutemons;
     }
 
+    public int getSize() { return lutemons.size(); }
+
     public static LutemonStorage getInstance() {
         if (storage == null) {
             storage = new LutemonStorage();

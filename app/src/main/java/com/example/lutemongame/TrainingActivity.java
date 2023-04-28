@@ -7,10 +7,13 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 
+import java.util.ArrayList;
+
 public class TrainingActivity extends AppCompatActivity {
 
     private RadioGroup trainingRg;
 
+    ArrayList<Lutemon> lutemonT = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +29,22 @@ public class TrainingActivity extends AppCompatActivity {
             listLayout.addView(cb);
         }
 
-        /*switch (trainingRg.getCheckedRadioButtonId()){
-            case R.id.rbHome:
-                LutemonStorage.getInstance().moveLutemons("training", "home", lutemon);
-            case R.id.rbBattle:
-                LutemonStorage.getInstance().moveLutemons("training", "battle", lutemon);
+        for (int j = 0; j < listLayout.getChildCount(); j++){
+            if(listLayout.getChildAt(j) instanceof CheckBox){
+                CheckBox cb = (CheckBox) listLayout.getChildAt(j);
+                if(cb.isChecked()){
+                    lutemonT.add(LutemonStorage.getInstance().getLutemon(cb.getId()));
+                }
+            }
+        }
 
-        }*/
+        switch (trainingRg.getCheckedRadioButtonId()){
+            case R.id.rbHome:
+                LutemonStorage.getInstance().moveLutemons("training", "home", lutemonT);
+            case R.id.rbBattle:
+                LutemonStorage.getInstance().moveLutemons("training", "battle", lutemonT);
+
+        }
 
 
 

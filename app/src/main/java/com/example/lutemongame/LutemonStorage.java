@@ -13,34 +13,47 @@ public class LutemonStorage {
     private Home home;
     private TrainingArea trainingArea;
     private BattleField battleField;
-    protected ArrayList<Lutemon> lutemons = new ArrayList<>();
+    //protected ArrayList<Lutemon> lutemons = new ArrayList<>();
+    protected ArrayList<Lutemon> allLutemons = new ArrayList<>();
     private static LutemonStorage storage = null;
 
     private LutemonStorage(){
     }
 
     public void addLutemon(Lutemon lutemon) {
-        lutemons.add(lutemon);
+        home.addLutemon(lutemon);
     }
 
     public Lutemon getLutemon(int id) {
-        return lutemons.get(id);
+        return allLutemons.get(id);
     }
 
     public ArrayList<Lutemon> getLutemons() {
-        return lutemons;
+        return allLutemons;
     }
 
-    public int getSize() { return lutemons.size(); }
+    public int getSize() { return allLutemons.size(); }
 
     public ArrayList<Lutemon> getAllLutemons() {
-        ArrayList<Lutemon> all = new ArrayList<>();
-        all.addAll(home.getLutemons());
-        all.addAll(battleField.getLutemons());
-        all.addAll(trainingArea.getLutemons());
+        allLutemons.addAll(home.getLutemons());
+        allLutemons.addAll(battleField.getLutemons());
+        allLutemons.addAll(trainingArea.getLutemons());
 
-        return all;
+        return allLutemons;
     }
+
+    public ArrayList<Lutemon> getHomeLutemons(){
+        return home.getLutemons();
+    }
+
+    public ArrayList<Lutemon> getTrainingLutemons(){
+        return trainingArea.getLutemons();
+    }
+
+    public ArrayList<Lutemon> getBattleLutemons(){
+        return battleField.getLutemons();
+    }
+
 
     public static LutemonStorage getInstance() {
         if (storage == null) {
@@ -49,37 +62,52 @@ public class LutemonStorage {
         return storage;
     }
 
-    public void moveLutemons(String from, String to, Lutemon lutemon){
+    public void moveLutemons(String from, String to, ArrayList<Lutemon> lutemons){
 
-        Habitat fromHabitat;
-        Habitat toHabitat;
+        Habitat fromHabitat = null;
+        Habitat toHabitat = null;
 
         switch(from){
             case "home":
                 fromHabitat = home;
+                break;
             case "training":
                 fromHabitat = trainingArea;
+                break;
             case "battle":
                 fromHabitat = battleField;
+                break;
+            default:
+                System.out.println("vittu");
+                throw new IllegalArgumentException("Invalid habitat" + from);
         }
 
         switch(to){
             case "home":
                 toHabitat = home;
+                break;
             case "training":
                 toHabitat = trainingArea;
+                break;
             case "battle":
                 toHabitat = battleField;
+                break;
+            default:
+                System.out.println("vittu");
+                throw new IllegalArgumentException("Invalid habitat" + to);
         }
 
-        //fromHabitat.removeLutemon(lutemon);
-        //toHabitat.addLutemon(lutemon);
+        for(int i = 0; i < lutemons.size(); i++) {
+            fromHabitat.removeLutemon(lutemons.get(i));
+            toHabitat.addLutemon(lutemons.get(i));
+        }
     }
 
     public void saveLutemons(Context context){
         try{
             ObjectOutputStream lutemonWriter = new ObjectOutputStream(context.openFileOutput("lutemons.data", Context.MODE_PRIVATE));
-            lutemonWriter.writeObject(lutemons);
+            allLutemons = LutemonStorage.getInstance().getAllLutemons();
+            lutemonWriter.writeObject(allLutemons);
             System.out.println("testi");
             lutemonWriter.close();
         } catch (IOException e) {
@@ -90,7 +118,7 @@ public class LutemonStorage {
     public void loadLutemons(Context context){
         try{
             ObjectInputStream lutemonReader = new ObjectInputStream(context.openFileInput("lutemons.data"));
-            lutemons = (ArrayList<Lutemon>) lutemonReader.readObject();
+            allLutemons = (ArrayList<Lutemon>) lutemonReader.readObject();
             lutemonReader.close();
         } catch (FileNotFoundException e){
             System.out.println("Lutemonien lukeminen ei onnistunut.");

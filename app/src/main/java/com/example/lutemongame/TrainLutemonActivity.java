@@ -20,7 +20,7 @@ public class TrainLutemonActivity extends AppCompatActivity {
         for (int i = 0; i < LutemonStorage.getInstance().getSize(); i++) {
             RadioButton rb = new RadioButton(this);
             rb.setId(i);
-            rb.setText(LutemonStorage.getInstance().getLutemon(i).getName());
+            rb.setText(LutemonStorage.getInstance().getLutemon(i).getName() + " (" + LutemonStorage.getInstance().getLutemon(i).getColor() +")");
             rgLutemonlist.addView(rb);
         }
     }

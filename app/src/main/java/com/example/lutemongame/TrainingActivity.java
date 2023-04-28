@@ -25,7 +25,7 @@ public class TrainingActivity extends AppCompatActivity {
         for (int i = 0; i < LutemonStorage.getInstance().getSize(); i++) {
             CheckBox cb = new CheckBox(this);
             cb.setId(i);
-            cb.setText(LutemonStorage.getInstance().getLutemon(i).getName());
+            cb.setText(LutemonStorage.getInstance().getLutemon(i).getName() + " (" + LutemonStorage.getInstance().getLutemon(i).getColor() +")");
             listLayout.addView(cb);
         }
 

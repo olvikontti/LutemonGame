@@ -29,4 +29,9 @@ public class MoveLutemonsActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MoveFromBattleActivity.class);
         startActivity(intent);
     }
+
+    public void switchToHomeMenu(View view) {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
 }

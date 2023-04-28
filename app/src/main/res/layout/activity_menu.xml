@@ -53,24 +53,14 @@
         app:layout_constraintTop_toBottomOf="@+id/btnAddNewLutemon" />
 
     <Button
-        android:id="@+id/btnHomePlace"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        android:text="Koti"
-        app:layout_constraintEnd_toEndOf="@+id/btnBattleArena"
-        app:layout_constraintStart_toStartOf="@+id/btnBattleArena"
-        app:layout_constraintTop_toBottomOf="@+id/btnBattleArena" />
-
-    <Button
         android:id="@+id/btnTrainingPlace"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:onClick="switchToTrainingArea"
         android:text="Harjoitusalue"
-        app:layout_constraintEnd_toEndOf="@+id/btnHomePlace"
-        app:layout_constraintStart_toStartOf="@+id/btnHomePlace"
-        app:layout_constraintTop_toBottomOf="@+id/btnHomePlace" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBattleArena" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

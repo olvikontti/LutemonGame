@@ -26,7 +26,9 @@ public class HomeActivity extends AppCompatActivity {
 
         LinearLayout listLayout = findViewById(R.id.homeListLayout);
 
-        for (int i = 0; i < LutemonStorage.getInstance().getLutemons().size(); i++) {
+        System.out.println("hometesti:Dddd");
+
+        for (int i = 0; i < LutemonStorage.getInstance().getHomeLutemons().size(); i++) {
             CheckBox cb = new CheckBox(this);
             cb.setId(i);
             cb.setText(LutemonStorage.getInstance().getLutemon(i).getName() + " (" + LutemonStorage.getInstance().getLutemon(i).getColor() +")");
@@ -41,9 +43,6 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         }
-
-
-
 
 
         btnMoveFromHome.setOnClickListener(new View.OnClickListener(){

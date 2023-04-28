@@ -33,4 +33,9 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BattleActivity.class);
         startActivity(intent);
     }
+
+    public void switchToTrainingArea(View view) {
+        Intent intent = new Intent(this, TrainLutemonActivity.class);
+        startActivity(intent);
+    }
 }

@@ -16,4 +16,6 @@ public abstract class Habitat{
 
     public abstract void addLutemon(Lutemon lutemon);
 
+    public abstract ArrayList<Lutemon> getLutemons();
+
 }

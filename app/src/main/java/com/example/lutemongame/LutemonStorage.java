@@ -34,23 +34,11 @@ public class LutemonStorage {
     public int getSize() { return lutemons.size(); }
 
     public ArrayList<Lutemon> getAllLutemons() {
-        ArrayList<Lutemon> allLutemons = new ArrayList<>();
-        allLutemons.addAll(home.getLutemons());
-        allLutemons.addAll(battleField.getLutemons());
-        allLutemons.addAll(trainingArea.getLutemons());
-        return allLutemons;
-    }
-
-    public ArrayList<Lutemon> getHomeLutemons(){
-        return home.getLutemons();
-    }
-
-    public ArrayList<Lutemon> getTrainingLutemons(){
-        return trainingArea.getLutemons();
-    }
-
-    public ArrayList<Lutemon> getBattleLutemons(){
-        return battleField.getLutemons();
+        ArrayList<Lutemon> all = new ArrayList<>();
+        all.addAll(home.getLutemons());
+        all.addAll(battleField.getLutemons());
+        all.addAll(trainingArea.getLutemons());
+        return all;
     }
 
 

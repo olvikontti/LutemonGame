@@ -29,40 +29,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <ScrollView
-        android:id="@+id/scrollView6"
-        android:layout_width="409dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView5">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <RadioGroup
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="55dp">
-
-                <RadioButton
-                    android:id="@+id/rbLutemonToHome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Kotiin" />
-
-                <RadioButton
-                    android:id="@+id/rbToTrain"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Treenaamaan" />
-            </RadioGroup>
-        </LinearLayout>
-    </ScrollView>
-
     <Button
         android:id="@+id/btnMoveFromBattle"
         android:layout_width="wrap_content"
@@ -71,5 +37,27 @@
         android:text="Siirrä valitut lutemonit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView6" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView5">
+
+        <RadioButton
+            android:id="@+id/rbLutemonToHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kotiin" />
+
+        <RadioButton
+            android:id="@+id/rbToTrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Treenaamaan" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

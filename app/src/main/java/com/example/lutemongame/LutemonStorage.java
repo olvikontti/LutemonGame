@@ -13,28 +13,28 @@ public class LutemonStorage {
     private Home home;
     private TrainingArea trainingArea;
     private BattleField battleField;
-    //protected ArrayList<Lutemon> lutemons = new ArrayList<>();
-    protected ArrayList<Lutemon> allLutemons = new ArrayList<>();
+    protected ArrayList<Lutemon> lutemons = new ArrayList<>();
     private static LutemonStorage storage = null;
 
     private LutemonStorage(){
     }
 
     public void addLutemon(Lutemon lutemon) {
-        home.addLutemon(lutemon);
+        lutemons.add(lutemon);
     }
 
     public Lutemon getLutemon(int id) {
-        return allLutemons.get(id);
+        return lutemons.get(id);
     }
 
     public ArrayList<Lutemon> getLutemons() {
-        return allLutemons;
+        return lutemons;
     }
 
-    public int getSize() { return allLutemons.size(); }
+    public int getSize() { return lutemons.size(); }
 
     public ArrayList<Lutemon> getAllLutemons() {
+        ArrayList<Lutemon> allLutemons = new ArrayList<>();
         allLutemons.addAll(home.getLutemons());
         allLutemons.addAll(battleField.getLutemons());
         allLutemons.addAll(trainingArea.getLutemons());
@@ -106,8 +106,7 @@ public class LutemonStorage {
     public void saveLutemons(Context context){
         try{
             ObjectOutputStream lutemonWriter = new ObjectOutputStream(context.openFileOutput("lutemons.data", Context.MODE_PRIVATE));
-            allLutemons = LutemonStorage.getInstance().getAllLutemons();
-            lutemonWriter.writeObject(allLutemons);
+            lutemonWriter.writeObject(lutemons);
             System.out.println("testi");
             lutemonWriter.close();
         } catch (IOException e) {
@@ -118,7 +117,7 @@ public class LutemonStorage {
     public void loadLutemons(Context context){
         try{
             ObjectInputStream lutemonReader = new ObjectInputStream(context.openFileInput("lutemons.data"));
-            allLutemons = (ArrayList<Lutemon>) lutemonReader.readObject();
+            lutemons = (ArrayList<Lutemon>) lutemonReader.readObject();
             lutemonReader.close();
         } catch (FileNotFoundException e){
             System.out.println("Lutemonien lukeminen ei onnistunut.");

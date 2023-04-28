@@ -29,6 +29,7 @@ public class AddLutemonActivity extends AppCompatActivity {
         String name = nameTxt.getText().toString();
         int id = LutemonStorage.getInstance().getLutemons().size() + 1;
         //String color = colorRg.toString();
+        System.out.println("testiprintti");
 
         switch (colorRg.getCheckedRadioButtonId()) {
             case R.id.rbWhite:
@@ -47,7 +48,8 @@ public class AddLutemonActivity extends AppCompatActivity {
                 LutemonStorage.getInstance().addLutemon(new Black(name, id));
                 break;
         }
-
+        System.out.println("testiiiiii");
         LutemonStorage.getInstance().saveLutemons(this);
+        System.out.println("testi3");
     }
 }

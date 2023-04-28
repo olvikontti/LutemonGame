@@ -12,17 +12,8 @@ public abstract class Habitat{
         this.lutemons = lutemons;
     }
 
-    public ArrayList<Lutemon> getLutemons(){
-        return lutemons;
-    }
+    public abstract void removeLutemon(Lutemon lutemon);
 
-    public void removeLutemon(Lutemon lutemon){
+    public abstract void addLutemon(Lutemon lutemon);
 
-        lutemons.remove(lutemon);
-    }
-
-    public void addLutemon(Lutemon lutemon){
-
-        lutemons.add(lutemon);
-    }
 }

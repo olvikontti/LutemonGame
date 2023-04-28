@@ -12,5 +12,15 @@ public class Home extends Habitat{
         super(name, lutemons);
     }
 
+    @Override
+    public void removeLutemon(Lutemon lutemon) {
+        lutemons.remove(lutemon);
+    }
+
+    @Override
+    public void addLutemon(Lutemon lutemon) {
+        lutemons.add(lutemon);
+    }
+
 
 }

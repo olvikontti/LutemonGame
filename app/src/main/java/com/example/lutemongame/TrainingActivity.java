@@ -30,7 +30,7 @@ public class TrainingActivity extends AppCompatActivity {
             case R.id.rbHome:
                 LutemonStorage.getInstance().moveLutemons("training", "home", lutemon);
             case R.id.rbBattle:
-                LutemonStorage.getInstance().moveLutemons("training", "home", lutemon);
+                LutemonStorage.getInstance().moveLutemons("training", "battle", lutemon);
 
         }
 

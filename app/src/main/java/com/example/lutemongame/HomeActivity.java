@@ -27,6 +27,8 @@ public class HomeActivity extends AppCompatActivity {
             listLayout.addView(cb);
         }
 
+
+
         switch (homeRg.getCheckedRadioButtonId()){
             case R.id.rbToTraining:
                 LutemonStorage.getInstance().moveLutemons("home", "training", lutemon);

@@ -50,6 +50,7 @@ public class LutemonStorage {
     }
 
     public void moveLutemons(String from, String to, Lutemon lutemon){
+
         Habitat fromHabitat;
         Habitat toHabitat;
 
@@ -71,8 +72,8 @@ public class LutemonStorage {
                 toHabitat = battleField;
         }
 
-        fromHabitat.addLutemon(lutemon);
-        toHabitat.removeLutemon(lutemon);
+        fromHabitat.removeLutemon(lutemon);
+        toHabitat.addLutemon(lutemon);
     }
 
     public void saveLutemons(Context context){

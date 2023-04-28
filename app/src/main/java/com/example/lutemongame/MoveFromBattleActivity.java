@@ -21,5 +21,7 @@ public class MoveFromBattleActivity extends AppCompatActivity {
             cb.setText(LutemonStorage.getInstance().getLutemon(i).getName());
             listLayout.addView(cb);
         }
+
+
     }
 }

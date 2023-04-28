@@ -29,13 +29,13 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-        switch (homeRg.getCheckedRadioButtonId()){
+        /*switch (homeRg.getCheckedRadioButtonId()){
             case R.id.rbToTraining:
                 LutemonStorage.getInstance().moveLutemons("home", "training", lutemon);
             case R.id.rbToBattle:
                 LutemonStorage.getInstance().moveLutemons("home", "battle", lutemon);
 
-        }
+        }*/
     }
 
 

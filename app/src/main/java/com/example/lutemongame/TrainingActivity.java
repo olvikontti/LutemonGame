@@ -26,13 +26,13 @@ public class TrainingActivity extends AppCompatActivity {
             listLayout.addView(cb);
         }
 
-        switch (trainingRg.getCheckedRadioButtonId()){
+        /*switch (trainingRg.getCheckedRadioButtonId()){
             case R.id.rbHome:
                 LutemonStorage.getInstance().moveLutemons("training", "home", lutemon);
             case R.id.rbBattle:
                 LutemonStorage.getInstance().moveLutemons("training", "battle", lutemon);
 
-        }
+        }*/
 
 
 

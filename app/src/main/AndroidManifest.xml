@@ -15,9 +15,6 @@
             android:name=".MoveFromBattleActivity"
             android:exported="false" />
         <activity
-            android:name=".HealLutemonHomeActivity"
-            android:exported="false" />
-        <activity
             android:name=".TrainLutemonActivity"
             android:exported="false" />
         <activity

@@ -3,6 +3,8 @@ package com.example.lutemongame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
@@ -14,7 +16,7 @@ public class BattleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_battle);
 
         LinearLayout listLayout = findViewById(R.id.trainingListLayout);
-        // LinearLayout battleLayout = findViewById(R.id.battleLayout);
+        LinearLayout battleLayout = findViewById(R.id.battleLayout);
 
         // Creates the checkbox list of available lutemons
         for (int i = 0; i < LutemonStorage.getInstance().getSize(); i++) {
@@ -24,16 +26,15 @@ public class BattleActivity extends AppCompatActivity {
             listLayout.addView(cb);
         }
 
-        /*Button btnBattle = findViewById(R.id.btnStartBattle);
+        Button btnBattle = findViewById(R.id.btnStartBattle);
         btnBattle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (battleLayout.getChildCount() > 0) {
                     battleLayout.removeAllViews();
                 }
-
             }
-        });*/
+        });
 
     }
 

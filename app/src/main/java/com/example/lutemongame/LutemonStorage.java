@@ -72,8 +72,8 @@ public class LutemonStorage {
                 toHabitat = battleField;
         }
 
-        fromHabitat.removeLutemon(lutemon);
-        toHabitat.addLutemon(lutemon);
+        //fromHabitat.removeLutemon(lutemon);
+        //toHabitat.addLutemon(lutemon);
     }
 
     public void saveLutemons(Context context){

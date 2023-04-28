@@ -2,6 +2,7 @@ package com.example.lutemongame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Notification;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
@@ -42,6 +43,9 @@ public class TrainLutemonActivity extends AppCompatActivity {
                     System.out.println(lutemon.getName());
                     System.out.println("testitesti");
                     LutemonStorage.getInstance().TrainingLutemonAttack(lutemon);
+                    LutemonStorage.getInstance().saveLutemons(TrainLutemonActivity.this);
+
+
 
                     Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + "'s attack has been improved!", Toast.LENGTH_SHORT).show();
                 }

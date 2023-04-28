@@ -49,18 +49,35 @@ public class LutemonStorage {
         return storage;
     }
 
-    public void TrainingLutemonAttack(Lutemon lutemon) {
-        if (trainingArea != null) {
-            trainingArea.trainAttack(lutemon);
 
-        }
+
+    public void trainAttack(Lutemon lutemon) {
+
+        lutemon.experience++;
+
+        int experiencePoints = lutemon.getExperience();
+        int attackPoints = experiencePoints;
+        lutemon.attack += attackPoints;
+
+        System.out.println("MOI");
+        System.out.println(lutemon.getName() + lutemon.attack + lutemon.experience);
+
+        return;
+
     }
-    public void TrainingLutemonDefence(Lutemon lutemon) {
-        if (trainingArea != null) {
-            trainingArea.trainDefence(lutemon);
+    public void trainDefence(Lutemon lutemon) {
+
+        lutemon.experience++;
+
+        int experiencePoints = lutemon.getExperience();
+        int defensePoints = experiencePoints;
+        lutemon.defense += defensePoints;
+
+        System.out.println("MOI");
 
 
-        }
+        return;
+
     }
 
     public ArrayList<Lutemon> getHomeLutemons(){

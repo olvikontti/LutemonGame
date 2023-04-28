@@ -65,8 +65,4 @@ public class Lutemon implements Serializable {
         return experience;
     }
 
-
-
-
-
 }

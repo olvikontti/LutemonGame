@@ -23,33 +23,9 @@ public class TrainingArea extends Habitat{
         return lutemons;
     }
 
-    public void trainAttack(Lutemon lutemon) {
-
-        lutemon.experience++;
-
-        int experiencePoints = lutemon.getExperience();
-        int attackPoints = experiencePoints;
-        lutemon.attack += attackPoints;
-
-        System.out.println("MOI");
-        return;
-
-    }
-
-    public void trainDefence(Lutemon lutemon) {
-
-        lutemon.experience++;
-
-        int experiencePoints = lutemon.getExperience();
-        int defensePoints = experiencePoints;
-        lutemon.defense += defensePoints;
-
-        System.out.println("MOI");
 
 
-        return;
 
-    }
 
 
 

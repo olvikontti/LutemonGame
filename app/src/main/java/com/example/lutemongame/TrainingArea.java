@@ -8,7 +8,4 @@ public class TrainingArea extends Habitat{
         super(name, lutemons);
     }
 
-    public ArrayList<Lutemon> getLutemons(){
-        return lutemons;
-    }
 }

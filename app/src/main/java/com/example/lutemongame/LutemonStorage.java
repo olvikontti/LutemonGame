@@ -49,6 +49,32 @@ public class LutemonStorage {
         return storage;
     }
 
+    public void moveLutemons(String from, String to, Lutemon lutemon){
+        Habitat fromHabitat;
+        Habitat toHabitat;
+
+        switch(from){
+            case "home":
+                fromHabitat = home;
+            case "training":
+                fromHabitat = trainingArea;
+            case "battle":
+                fromHabitat = battleField;
+        }
+
+        switch(to){
+            case "home":
+                toHabitat = home;
+            case "training":
+                toHabitat = trainingArea;
+            case "battle":
+                toHabitat = battleField;
+        }
+
+        fromHabitat.addLutemon(lutemon);
+        toHabitat.removeLutemon(lutemon);
+    }
+
     public void saveLutemons(Context context){
         try{
             ObjectOutputStream lutemonWriter = new ObjectOutputStream(context.openFileOutput("lutemons.data", Context.MODE_PRIVATE));

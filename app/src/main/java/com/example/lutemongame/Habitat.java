@@ -11,4 +11,18 @@ public abstract class Habitat{
         this.name = name;
         this.lutemons = lutemons;
     }
+
+    public ArrayList<Lutemon> getLutemons(){
+        return lutemons;
+    }
+
+    public void removeLutemon(Lutemon lutemon){
+
+        lutemons.remove(lutemon);
+    }
+
+    public void addLutemon(Lutemon lutemon){
+
+        lutemons.add(lutemon);
+    }
 }

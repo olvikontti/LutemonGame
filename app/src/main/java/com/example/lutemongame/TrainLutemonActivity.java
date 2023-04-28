@@ -37,6 +37,8 @@ public class TrainLutemonActivity extends AppCompatActivity {
                     Toast.makeText(TrainLutemonActivity.this, "Please select a Lutemon to train", Toast.LENGTH_SHORT).show();
                 } else {
                     Lutemon lutemon = LutemonStorage.getInstance().getLutemon(selectedId);
+                    System.out.println(lutemon.getName());
+                    System.out.println("testitesti");
                     LutemonStorage.getInstance().TrainingLutemonAttack(lutemon);
                     Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + "'s attack has been improved!", Toast.LENGTH_SHORT).show();
                 }
@@ -51,7 +53,7 @@ public class TrainLutemonActivity extends AppCompatActivity {
                     Toast.makeText(TrainLutemonActivity.this, "Please select a Lutemon to train", Toast.LENGTH_SHORT).show();
                 } else {
                     Lutemon lutemon = LutemonStorage.getInstance().getLutemon(selectedId);
-                    LutemonStorage.getInstance().TrainingLutemonDefence();
+                    LutemonStorage.getInstance().TrainingLutemonDefence(lutemon);
                     Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + "'s defence has been improved!", Toast.LENGTH_SHORT).show();
                 }
             }

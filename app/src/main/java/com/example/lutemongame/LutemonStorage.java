@@ -38,7 +38,6 @@ public class LutemonStorage {
         allLutemons.addAll(home.getLutemons());
         allLutemons.addAll(battleField.getLutemons());
         allLutemons.addAll(trainingArea.getLutemons());
-
         return allLutemons;
     }
 
@@ -65,8 +64,8 @@ public class LutemonStorage {
     public void TrainingLutemonAttack(Lutemon lutemon) {
         trainingArea.trainAttack(lutemon);
     }
-    public void TrainingLutemonDefence() {
-        trainingArea.trainDefence();
+    public void TrainingLutemonDefence(Lutemon lutemon) {
+        trainingArea.trainDefence(lutemon);
     }
 
 

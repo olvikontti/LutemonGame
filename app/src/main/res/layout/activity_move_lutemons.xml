@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
-        android:onClick="switchToTraining"
+        android:onClick="switchToTrain"
         android:text="Treeni"
         app:layout_constraintEnd_toStartOf="@+id/btnToBattle"
         app:layout_constraintHorizontal_bias="0.536"

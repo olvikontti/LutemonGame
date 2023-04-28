@@ -62,10 +62,17 @@ public class LutemonStorage {
     }
 
     public void TrainingLutemonAttack(Lutemon lutemon) {
-        trainingArea.trainAttack(lutemon);
+        if (trainingArea != null) {
+            trainingArea.trainAttack(lutemon);
+
+        }
     }
     public void TrainingLutemonDefence(Lutemon lutemon) {
-        trainingArea.trainDefence(lutemon);
+        if (trainingArea != null) {
+            trainingArea.trainDefence(lutemon);
+
+
+        }
     }
 
 

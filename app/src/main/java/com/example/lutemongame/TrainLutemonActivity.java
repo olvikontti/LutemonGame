@@ -2,6 +2,7 @@ package com.example.lutemongame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class TrainLutemonActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class TrainLutemonActivity extends AppCompatActivity {
                     System.out.println(lutemon.getName());
                     System.out.println("testitesti");
                     LutemonStorage.getInstance().TrainingLutemonAttack(lutemon);
+
                     Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + "'s attack has been improved!", Toast.LENGTH_SHORT).show();
                 }
             }

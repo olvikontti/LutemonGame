@@ -9,7 +9,7 @@
     <ScrollView
         android:id="@+id/svTraining"
         android:layout_width="409dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,13 +30,48 @@
         </LinearLayout>
     </ScrollView>
 
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="409dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svTraining">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="55dp">
+
+                <RadioButton
+                    android:id="@+id/rbToTraining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Treenaamaan" />
+
+                <RadioButton
+                    android:id="@+id/rbToBattle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Taisteluareenalle" />
+
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
     <Button
-        android:id="@+id/btnMove"
+        android:id="@+id/btnMoveFromHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="300dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="Siirrä valitut lutemonit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

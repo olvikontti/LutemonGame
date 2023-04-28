@@ -18,6 +18,11 @@ public class TrainingArea extends Habitat{
         lutemons.add(lutemon);
     }
 
+    @Override
+    public ArrayList<Lutemon> getLutemons() {
+        return lutemons;
+    }
+
     public void trainAttack(Lutemon lutemon) {
 
         lutemon.experience++;

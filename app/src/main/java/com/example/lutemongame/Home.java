@@ -22,5 +22,10 @@ public class Home extends Habitat{
         lutemons.add(lutemon);
     }
 
+    @Override
+    public ArrayList<Lutemon> getLutemons() {
+        return lutemons;
+    }
+
 
 }

@@ -2,14 +2,9 @@ package com.example.lutemongame;
 
 import java.util.ArrayList;
 
-public class BattleField extends LutemonStorage{
-    public BattleField(ArrayList<Lutemon> lutemons, String name) {
-        super(lutemons, name);
+public class BattleField extends Habitat{
+
+    public BattleField(String name, ArrayList<Lutemon> lutemons) {
+        super(name, lutemons);
     }
-
-    public void fight() {
-
-    }
-
-
 }

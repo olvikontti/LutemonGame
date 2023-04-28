@@ -7,4 +7,8 @@ public class BattleField extends Habitat{
     public BattleField(String name, ArrayList<Lutemon> lutemons) {
         super(name, lutemons);
     }
+
+    public ArrayList<Lutemon> getLutemons(){
+        return lutemons;
+    }
 }

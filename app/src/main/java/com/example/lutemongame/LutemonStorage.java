@@ -33,6 +33,15 @@ public class LutemonStorage {
 
     public int getSize() { return lutemons.size(); }
 
+    public ArrayList<Lutemon> getAllLutemons() {
+        ArrayList<Lutemon> all = new ArrayList<>();
+        all.addAll(home.getLutemons());
+        all.addAll(battleField.getLutemons());
+        all.addAll(trainingArea.getLutemons());
+
+        return all;
+    }
+
     public static LutemonStorage getInstance() {
         if (storage == null) {
             storage = new LutemonStorage();

@@ -12,4 +12,12 @@ public class Home extends Habitat{
         super(name, lutemons);
     }
 
+    public ArrayList<Lutemon> getLutemons(){
+        return lutemons;
+    }
+
+    public void removeLutemon(){
+        lutemons.remove();
+    }
+
 }

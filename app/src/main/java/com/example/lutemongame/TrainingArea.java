@@ -7,4 +7,8 @@ public class TrainingArea extends Habitat{
     public TrainingArea(String name, ArrayList<Lutemon> lutemons) {
         super(name, lutemons);
     }
+
+    public ArrayList<Lutemon> getLutemons(){
+        return lutemons;
+    }
 }

@@ -28,12 +28,12 @@ public class AddLutemonActivity extends AppCompatActivity {
 
         String name = nameTxt.getText().toString();
         int id = LutemonStorage.getInstance().getLutemons().size() + 1;
-        //String color = colorRg.toString();
         System.out.println("testiprintti");
 
         switch (colorRg.getCheckedRadioButtonId()) {
             case R.id.rbWhite:
-                LutemonStorage.getInstance().addLutemon(new White(name, id));
+                Lutemon l = new White(name, id);
+                LutemonStorage.getInstance().addLutemon(l);
                 break;
             case R.id.rbGreen:
                 LutemonStorage.getInstance().addLutemon(new Green(name, id));

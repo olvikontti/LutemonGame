@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 public class LutemonStorage {
 
-    private Home home;
-    private TrainingArea trainingArea;
-    private BattleField battleField;
+    private Home home = null;
+    private TrainingArea trainingArea = null;
+    private BattleField battleField = null;
     protected ArrayList<Lutemon> lutemons = new ArrayList<>();
     private static LutemonStorage storage = null;
 
@@ -61,6 +61,11 @@ public class LutemonStorage {
 
 
         }
+    }
+
+    public ArrayList<Lutemon> getHomeLutemons(){
+        home.getLutemons();
+        return lutemons;
     }
 
 

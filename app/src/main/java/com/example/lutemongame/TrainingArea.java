@@ -8,12 +8,19 @@ public class TrainingArea extends Habitat{
         super(name, lutemons);
     }
 
-    public void trainAttack() {
+    public void trainAttack(Lutemon lutemon) {
 
+
+
+
+
+        return;
 
     }
 
     public void trainDefence() {
+
+        return;
 
     }
 

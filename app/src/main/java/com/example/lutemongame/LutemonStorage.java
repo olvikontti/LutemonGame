@@ -62,6 +62,14 @@ public class LutemonStorage {
         return storage;
     }
 
+    public void TrainingLutemonAttack(Lutemon lutemon) {
+        trainingArea.trainAttack(lutemon);
+    }
+    public void TrainingLutemonDefence() {
+        trainingArea.trainDefence();
+    }
+
+
     public void moveLutemons(String from, String to, ArrayList<Lutemon> lutemons){
 
         Habitat fromHabitat = null;

@@ -54,8 +54,8 @@
     <ScrollView
         android:id="@+id/svBattleField"
         android:layout_width="409dp"
-        android:layout_height="420dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStartBattle">
@@ -66,13 +66,23 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtBattle"
+            <LinearLayout
+                android:id="@+id/battleListLayout"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="55dp" />
+                android:layout_height="match_parent"
+                android:layout_marginLeft="55dp"
+                android:orientation="vertical"></LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/textLayout"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/svBattleField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

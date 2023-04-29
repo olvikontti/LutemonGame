@@ -29,8 +29,16 @@ public class Lutemon implements Serializable {
         this.experience = experience;
         this.image = image;
     }
-
-
+    public void setExperience() {
+        this.experience += 1;
+    }
+    public void defend(int damage) {
+        if (this.defense > damage) {
+            this.health -= 1;
+        } else {
+            this.health -= damage;
+        }
+    }
     public String getName() {
         return name;
     }

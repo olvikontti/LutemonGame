@@ -37,13 +37,13 @@ public class TrainLutemonActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int selectedId = rgLutemonlist.getCheckedRadioButtonId();
                 if (selectedId == -1) {
-                    Toast.makeText(TrainLutemonActivity.this, "Please select a Lutemon to train", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TrainLutemonActivity.this, "Valitse Lutemoni, jota treenataan", Toast.LENGTH_SHORT).show();
                 } else {
                     Lutemon lutemon = LutemonStorage.getInstance().getLutemon(selectedId);
                     System.out.println(lutemon.getName());
 
                     LutemonStorage.getInstance().trainAttack(lutemon);
-                    Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + "'s attack has been improved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + " hyökkäystä on kehitetty!", Toast.LENGTH_SHORT).show();
                     LutemonStorage.getInstance().saveLutemons(TrainLutemonActivity.this);
                 }
             }
@@ -56,11 +56,11 @@ public class TrainLutemonActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int selectedId = rgLutemonlist.getCheckedRadioButtonId();
                 if (selectedId == -1) {
-                    Toast.makeText(TrainLutemonActivity.this, "Please select a Lutemon to train", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TrainLutemonActivity.this, "Valitse Lutemoni, jota treenataan", Toast.LENGTH_SHORT).show();
                 } else {
                     Lutemon lutemon = LutemonStorage.getInstance().getLutemon(selectedId);
                     LutemonStorage.getInstance().trainDefence(lutemon);
-                    Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + "'s defence has been improved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + " puolustusta on kehitetty!", Toast.LENGTH_SHORT).show();
                     LutemonStorage.getInstance().saveLutemons(TrainLutemonActivity.this);
                 }
             }

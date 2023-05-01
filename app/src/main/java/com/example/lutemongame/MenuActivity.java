@@ -24,10 +24,7 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void switchToMoveLutemons(View view) {
-        Intent intent = new Intent(this, MoveLutemonsActivity.class);
-        startActivity(intent);
-    }
+
 
     public void switchToBattle(View view) {
         Intent intent = new Intent(this, BattleActivity.class);

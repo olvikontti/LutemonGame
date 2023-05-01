@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 if (username.equals("testi") && password.equals("testi")) {
                     switchToMenu(view);
                 } else {
-                    Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Väärä käyttäjänimi tai salasana", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -49,8 +49,6 @@ public class LutemonStorage {
         return storage;
     }
 
-
-
     public void trainAttack(Lutemon lutemon) {
 
         lutemon.experience++;
@@ -58,9 +56,6 @@ public class LutemonStorage {
         int experiencePoints = lutemon.getExperience();
         int attackPoints = experiencePoints;
         lutemon.attack += attackPoints;
-
-        System.out.println("MOI");
-        System.out.println(lutemon.getName() + lutemon.attack + lutemon.experience);
 
         return;
 
@@ -72,9 +67,6 @@ public class LutemonStorage {
         int experiencePoints = lutemon.getExperience();
         int defensePoints = experiencePoints;
         lutemon.defense += defensePoints;
-
-        System.out.println("MOI");
-
 
         return;
 

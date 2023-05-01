@@ -44,6 +44,7 @@ public class TrainLutemonActivity extends AppCompatActivity {
 
                     LutemonStorage.getInstance().trainAttack(lutemon);
                     Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + "'s attack has been improved!", Toast.LENGTH_SHORT).show();
+                    LutemonStorage.getInstance().saveLutemons(TrainLutemonActivity.this);
                 }
             }
 
@@ -60,6 +61,7 @@ public class TrainLutemonActivity extends AppCompatActivity {
                     Lutemon lutemon = LutemonStorage.getInstance().getLutemon(selectedId);
                     LutemonStorage.getInstance().trainDefence(lutemon);
                     Toast.makeText(TrainLutemonActivity.this, lutemon.getName() + "'s defence has been improved!", Toast.LENGTH_SHORT).show();
+                    LutemonStorage.getInstance().saveLutemons(TrainLutemonActivity.this);
                 }
             }
         });

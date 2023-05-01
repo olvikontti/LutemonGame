@@ -69,6 +69,16 @@ public class LutemonStorage {
 
     }
 
+    public void trainEndurance(Lutemon lutemon){
+
+        lutemon.maxHealth++;
+        lutemon.health++;
+    }
+
+    public void deleteLutemon(Lutemon lutemon){
+        lutemons.remove(lutemon);
+    }
+
 
 
     /*public void moveLutemons(String from, String to, ArrayList<Lutemon> lutemons){

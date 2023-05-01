@@ -56,7 +56,7 @@ public class BattleActivity extends AppCompatActivity {
                         }
                     }
                 }
-                // Checks the number of selected lutemons is two
+                // Checks if the number of selected lutemons is two
                 if (lutemonsForBattle.size() == 2) {
                     Toast.makeText(BattleActivity.this, "Taistelu alkaa!", Toast.LENGTH_SHORT).show();
                     getLutemonsId();

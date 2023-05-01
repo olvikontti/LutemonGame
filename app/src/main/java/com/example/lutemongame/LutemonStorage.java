@@ -10,9 +10,6 @@ import java.util.ArrayList;
 
 public class LutemonStorage {
 
-    private Home home = null;
-    private TrainingArea trainingArea = null;
-    private BattleField battleField = null;
     protected ArrayList<Lutemon> lutemons = new ArrayList<>();
     private static LutemonStorage storage = null;
 
@@ -33,13 +30,13 @@ public class LutemonStorage {
 
     public int getSize() { return lutemons.size(); }
 
-    public ArrayList<Lutemon> getAllLutemons() {
+    /*public ArrayList<Lutemon> getAllLutemons() {
         ArrayList<Lutemon> all = new ArrayList<>();
         all.addAll(home.getLutemons());
         all.addAll(battleField.getLutemons());
         all.addAll(trainingArea.getLutemons());
         return all;
-    }
+    }*/
 
 
     public static LutemonStorage getInstance() {
@@ -72,13 +69,9 @@ public class LutemonStorage {
 
     }
 
-    public ArrayList<Lutemon> getHomeLutemons(){
-        home.getLutemons();
-        return lutemons;
-    }
 
 
-    public void moveLutemons(String from, String to, ArrayList<Lutemon> lutemons){
+    /*public void moveLutemons(String from, String to, ArrayList<Lutemon> lutemons){
 
         Habitat fromHabitat = null;
         Habitat toHabitat = null;
@@ -117,7 +110,7 @@ public class LutemonStorage {
             fromHabitat.removeLutemon(lutemons.get(i));
             toHabitat.addLutemon(lutemons.get(i));
         }
-    }
+    }*/
 
     public void saveLutemons(Context context){
         try{

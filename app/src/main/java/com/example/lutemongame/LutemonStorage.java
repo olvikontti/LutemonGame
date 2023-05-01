@@ -79,6 +79,17 @@ public class LutemonStorage {
         lutemons.remove(lutemon);
     }
 
+    public void removeLutemonFromList(int id){
+        int i = 0;
+        for(Lutemon l : lutemons){
+            if(l.getId() == id){
+                break;
+            }
+            i++;
+        }
+        lutemons.remove(i);
+    }
+
 
 
     /*public void moveLutemons(String from, String to, ArrayList<Lutemon> lutemons){

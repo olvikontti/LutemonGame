@@ -2,6 +2,7 @@ package com.example.lutemongame;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -33,6 +34,15 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
         holder.lutemonHealth.setText("Elämä: " + String.valueOf(lutemons.get(position).getHealth()) + "/" + String.valueOf(lutemons.get(position).getMaxHealth()));
         holder.lutemonExperience.setText("Kokemus: " + String.valueOf(lutemons.get(position).getExperience()));
         holder.lutemonImage.setImageResource(lutemons.get(position).getImage());
+
+        holder.deleteImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int pos = holder.getAdapterPosition();
+                LutemonStorage.getInstance().removeLutemonFromList(lutemons.get(pos).getId());
+                notifyItemRemoved(pos);
+            }
+        });
     }
 
     @Override

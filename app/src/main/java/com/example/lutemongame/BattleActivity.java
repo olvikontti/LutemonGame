@@ -82,6 +82,7 @@ public class BattleActivity extends AppCompatActivity {
                         if (lutemon1.getHealth() <= 0) {
                             addText(lutemon1.getName(), lutemon2.getName(), 0, 3);
                             lutemon2.setExperience();
+                            lutemon2.health = lutemon2.maxHealth;
                             LutemonStorage.getInstance().deleteLutemon(lutemon1);
                             LutemonStorage.getInstance().saveLutemons(BattleActivity.this);
 
@@ -89,6 +90,7 @@ public class BattleActivity extends AppCompatActivity {
                         if (lutemon2.getHealth() <= 0) {
                             addText(lutemon2.getName(), lutemon1.getName(), 0, 3);
                             lutemon1.setExperience();
+                            lutemon1.health = lutemon1.maxHealth;
                             LutemonStorage.getInstance().deleteLutemon(lutemon2);
                             LutemonStorage.getInstance().saveLutemons(BattleActivity.this);
                         }

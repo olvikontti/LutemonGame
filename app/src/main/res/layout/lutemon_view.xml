@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:text="Nimi (väri)"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -38,24 +38,28 @@
             android:id="@+id/tvAttack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hyökkäys" />
+            android:text="Hyökkäys"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvDefense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Puolustus" />
+            android:text="Puolustus"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvHealth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elämä" />
+            android:text="Elämä"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvExperience"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kokemus" />
+            android:text="Kokemus"
+            android:textSize="16sp" />
     </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

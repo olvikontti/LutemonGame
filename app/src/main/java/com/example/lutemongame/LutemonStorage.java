@@ -30,14 +30,6 @@ public class LutemonStorage {
 
     public int getSize() { return lutemons.size(); }
 
-    /*public ArrayList<Lutemon> getAllLutemons() {
-        ArrayList<Lutemon> all = new ArrayList<>();
-        all.addAll(home.getLutemons());
-        all.addAll(battleField.getLutemons());
-        all.addAll(trainingArea.getLutemons());
-        return all;
-    }*/
-
 
     public static LutemonStorage getInstance() {
         if (storage == null) {
@@ -90,48 +82,6 @@ public class LutemonStorage {
         lutemons.remove(i);
     }
 
-
-
-    /*public void moveLutemons(String from, String to, ArrayList<Lutemon> lutemons){
-
-        Habitat fromHabitat = null;
-        Habitat toHabitat = null;
-
-        switch(from){
-            case "home":
-                fromHabitat = home;
-                break;
-            case "training":
-                fromHabitat = trainingArea;
-                break;
-            case "battle":
-                fromHabitat = battleField;
-                break;
-            default:
-                System.out.println("vittu");
-                throw new IllegalArgumentException("Invalid habitat" + from);
-        }
-
-        switch(to){
-            case "home":
-                toHabitat = home;
-                break;
-            case "training":
-                toHabitat = trainingArea;
-                break;
-            case "battle":
-                toHabitat = battleField;
-                break;
-            default:
-                System.out.println("vittu");
-                throw new IllegalArgumentException("Invalid habitat" + to);
-        }
-
-        for(int i = 0; i < lutemons.size(); i++) {
-            fromHabitat.removeLutemon(lutemons.get(i));
-            toHabitat.addLutemon(lutemons.get(i));
-        }
-    }*/
 
     public void saveLutemons(Context context){
         try{

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 String password = passwordtxt.getText().toString();
 
 
-                if (username.equals("käyttäjä") && password.equals("salasana")) {
+                if (username.equals("kayttaja") && password.equals("salasana")) {
                     switchToMenu(view);
                 } else {
                     Toast.makeText(MainActivity.this, "Väärä käyttäjänimi tai salasana", Toast.LENGTH_SHORT).show();

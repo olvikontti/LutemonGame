@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class BattleActivity extends AppCompatActivity {
@@ -98,8 +99,6 @@ public class BattleActivity extends AppCompatActivity {
                             LutemonStorage.getInstance().saveLutemons(BattleActivity.this);
                         }
 
-                        addTextView(lutemon1.getName(), lutemon1.getAttack(), lutemon1.getDefense(), lutemon1.getExperience(), lutemon1.getHealth(), lutemon1.getMaxHealth());
-                        addTextView(lutemon2.getName(), lutemon2.getAttack(), lutemon2.getDefense(), lutemon2.getExperience(), lutemon2.getHealth(), lutemon2.getMaxHealth());
 
                         j++;
                     }
@@ -141,7 +140,7 @@ public class BattleActivity extends AppCompatActivity {
         if (print == 1) {
             battleText.setText(att + " attacks " + def + " for " + damage + " damage.");
         } else if (print == 2) {
-            battleText.setText(att + " manages to escape death.");
+            battleText.setText(att + " manages to escape death.\n");
         } else if (print == 3) {
             battleText.setText(att + " gets killed and " + def + " won!");
         }

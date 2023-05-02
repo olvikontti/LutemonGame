@@ -68,18 +68,19 @@ public class BattleActivity extends AppCompatActivity {
                     // Battle
                     while (lutemon1.getHealth() > 0 && lutemon2.getHealth() > 0) {
 
-
                         // Lutemons attack and defend alternately
                         if (j % 2 == 0) {
-                            lutemon1.defend(lutemon2.getAttack());
+                            addText("1: ", lutemon1.getName(), lutemon1.getHealth(), 4);
+                            addText("2: ", lutemon2.getName(), lutemon2.getHealth(), 4);
+                            lutemon2.defend(lutemon1.getAttack());
                             addText(lutemon1.getName(), lutemon2.getName(), lutemon1.getAttack(), 1);
                             addText(lutemon2.getName(), "", 0, 2);
-
                         } else {
-                            lutemon2.defend(lutemon1.getAttack());
+                            addText("2: ", lutemon2.getName(), lutemon2.getHealth(), 4);
+                            addText("1: ", lutemon1.getName(), lutemon1.getHealth(), 4);
+                            lutemon1.defend(lutemon2.getAttack());
                             addText(lutemon2.getName(), lutemon1.getName(), lutemon2.getAttack(), 1);
                             addText(lutemon1.getName(), "", 0, 2);
-
                         }
 
                         // Checks if lutemon dies
@@ -98,7 +99,6 @@ public class BattleActivity extends AppCompatActivity {
                             LutemonStorage.getInstance().deleteLutemon(lutemon2);
                             LutemonStorage.getInstance().saveLutemons(BattleActivity.this);
                         }
-
 
                         j++;
                     }
@@ -134,15 +134,17 @@ public class BattleActivity extends AppCompatActivity {
         textLayout.addView(battleText);
     }
 
-    private void addText(String att, String def, int damage, int print) {
+    private void addText(String att, String def, int num, int print) {
         TextView battleText = new TextView(BattleActivity.this);
         LinearLayout layout = findViewById(R.id.battleListLayout);
         if (print == 1) {
-            battleText.setText(att + " attacks " + def + " for " + damage + " damage.");
+            battleText.setText(att + " attacks " + def + " for " + num + " damage.");
         } else if (print == 2) {
             battleText.setText(att + " manages to escape death.\n");
         } else if (print == 3) {
             battleText.setText(att + " gets killed and " + def + " won!");
+        } else if (print == 4) {
+            battleText.setText(att + def + " health: " + num);
         }
         layout.addView(battleText);
     }

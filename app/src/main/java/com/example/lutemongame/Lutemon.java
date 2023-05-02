@@ -33,11 +33,7 @@ public class Lutemon implements Serializable {
         this.experience += 1;
     }
     public void defend(int damage) {
-        if (this.defense > damage) {
-            this.health -= 1;
-        } else {
-            this.health -= damage;
-        }
+        this.health = this.health + this.defense - damage;
     }
     public String getName() {
         return name;

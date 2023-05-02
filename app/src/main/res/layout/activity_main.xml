@@ -42,4 +42,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvLoginText"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="96dp"
+        android:text="Kirjaudu peliin!"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

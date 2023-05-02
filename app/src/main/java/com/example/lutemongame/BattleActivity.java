@@ -67,15 +67,18 @@ public class BattleActivity extends AppCompatActivity {
                     // Battle
                     while (lutemon1.getHealth() > 0 && lutemon2.getHealth() > 0) {
 
+
                         // Lutemons attack and defend alternately
                         if (j % 2 == 0) {
                             lutemon1.defend(lutemon2.getAttack());
                             addText(lutemon1.getName(), lutemon2.getName(), lutemon1.getAttack(), 1);
                             addText(lutemon2.getName(), "", 0, 2);
+
                         } else {
                             lutemon2.defend(lutemon1.getAttack());
                             addText(lutemon2.getName(), lutemon1.getName(), lutemon2.getAttack(), 1);
                             addText(lutemon1.getName(), "", 0, 2);
+
                         }
 
                         // Checks if lutemon dies
@@ -94,6 +97,10 @@ public class BattleActivity extends AppCompatActivity {
                             LutemonStorage.getInstance().deleteLutemon(lutemon2);
                             LutemonStorage.getInstance().saveLutemons(BattleActivity.this);
                         }
+
+                        addTextView(lutemon1.getName(), lutemon1.getAttack(), lutemon1.getDefense(), lutemon1.getExperience(), lutemon1.getHealth(), lutemon1.getMaxHealth());
+                        addTextView(lutemon2.getName(), lutemon2.getAttack(), lutemon2.getDefense(), lutemon2.getExperience(), lutemon2.getHealth(), lutemon2.getMaxHealth());
+
                         j++;
                     }
                 } else {

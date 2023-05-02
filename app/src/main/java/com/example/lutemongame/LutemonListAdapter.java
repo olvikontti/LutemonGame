@@ -41,6 +41,7 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
                 int pos = holder.getAdapterPosition();
                 LutemonStorage.getInstance().removeLutemonFromList(lutemons.get(pos).getId());
                 notifyItemRemoved(pos);
+                LutemonStorage.getInstance().saveLutemons(context);
             }
         });
     }

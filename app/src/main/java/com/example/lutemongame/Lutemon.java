@@ -7,7 +7,6 @@ public class Lutemon implements Serializable {
     private static final long SerialVersion1 = 123;
 
     protected String name;
-
     protected String color;
     protected int attack;
     protected int defense;

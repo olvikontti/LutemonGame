@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         loginbtn = findViewById(R.id.btnLogin);
 
 
+        // the login feature
+
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

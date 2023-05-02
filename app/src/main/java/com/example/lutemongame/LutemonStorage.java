@@ -11,9 +11,19 @@ import java.util.ArrayList;
 public class LutemonStorage {
 
     protected ArrayList<Lutemon> lutemons = new ArrayList<>();
+
     private static LutemonStorage storage = null;
 
     private LutemonStorage(){
+    }
+
+    // LutemonStorage is a singleton class
+
+    public static LutemonStorage getInstance() {
+        if (storage == null) {
+            storage = new LutemonStorage();
+        }
+        return storage;
     }
 
     public void addLutemon(Lutemon lutemon) {
@@ -29,14 +39,6 @@ public class LutemonStorage {
     }
 
     public int getSize() { return lutemons.size(); }
-
-
-    public static LutemonStorage getInstance() {
-        if (storage == null) {
-            storage = new LutemonStorage();
-        }
-        return storage;
-    }
 
     public void trainAttack(Lutemon lutemon) {
 
@@ -82,12 +84,10 @@ public class LutemonStorage {
         lutemons.remove(i);
     }
 
-
     public void saveLutemons(Context context){
         try{
             ObjectOutputStream lutemonWriter = new ObjectOutputStream(context.openFileOutput("lutemons.data", Context.MODE_PRIVATE));
             lutemonWriter.writeObject(lutemons);
-            System.out.println("testi");
             lutemonWriter.close();
         } catch (IOException e) {
             System.out.println("Lutemonien tallentaminen ei onnistunut");

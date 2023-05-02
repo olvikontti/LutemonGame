@@ -25,7 +25,6 @@ public class MenuActivity extends AppCompatActivity {
     }
 
 
-
     public void switchToBattle(View view) {
         Intent intent = new Intent(this, BattleActivity.class);
         startActivity(intent);

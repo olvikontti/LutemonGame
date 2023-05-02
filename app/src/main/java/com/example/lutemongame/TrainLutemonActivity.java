@@ -64,6 +64,8 @@ public class TrainLutemonActivity extends AppCompatActivity {
             }
         });
 
+
+        //Improves endurance (max health) of the selected lutemon
         btnImrpoveEndurance.setOnClickListener(new View.OnClickListener() {
 
             @Override

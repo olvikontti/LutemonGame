@@ -30,6 +30,8 @@ public class AddLutemonActivity extends AppCompatActivity {
         int id = LutemonStorage.getInstance().getLutemons().size() + 1;
 
 
+        // Adds a new lutemon to the lutemon list based on the chosen radio button
+
         switch (colorRg.getCheckedRadioButtonId()) {
             case R.id.rbWhite:
                 Lutemon l = new White(name, id);
